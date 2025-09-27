@@ -6,7 +6,7 @@ import { MessageSquare, Mic, MicOff, Send } from 'lucide-react';
 
 export default function RightPanel() {
 
-    const { saveFile , messages, inputMessage, setInputMessage, isRecording, splitPos, audioLevels, setAudioLevels, handleVoiceToggle, handleKeyPress, handleSendMessage } : any = useContext()
+    const { loading, saveFile , messages, inputMessage, setInputMessage, isRecording, splitPos, audioLevels, setAudioLevels, handleVoiceToggle, handleKeyPress, handleSendMessage } : any = useContext()
 
     const [time, setTime] = useState();
     console.log(messages);
@@ -51,7 +51,7 @@ export default function RightPanel() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          <div className="flex-1 overflow-y-scroll p-4 space-y-4">
             {messages.map((message: any) => (
               <div
                 key={message.id}
@@ -65,14 +65,24 @@ export default function RightPanel() {
                   }`}
                 >
                   <div className="text-sm">{message.content}</div>
+                  
                 </div>
               </div>
             ))}
             <div ref={chatEndRef} />
+            {
+                      loading && <div className="">
+                        <div className="mt-2 flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce200"></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce400"></div>
+                        </div>
+                      </div>
+                  }
           </div>
 
           {/* Input Area */}
-          <div className="border-t border-gray-200 p-4">
+          <div className="border-t border-gray-200 p-4 fixed bottom-0 w-[50%] bg-white">
             <div className="flex items-end space-x-2">
               <div className="flex-1 relative">
                 <textarea
