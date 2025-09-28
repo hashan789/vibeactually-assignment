@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import axios from 'axios';
+import axios from '../lib/axios';
 import { ReactElement, ReactNode } from 'react';
 
 export const useContext = create((set,get: any) => ({
@@ -36,7 +36,7 @@ export const useContext = create((set,get: any) => ({
         reader.onloadend =  async () => {
           const formData = new FormData()
           formData.append('document', file)
-          const response = await axios.post('http://localhost:4000/api/documents/upload' , formData, {
+          const response = await axios.post('documents/upload' , formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -101,7 +101,7 @@ export const useContext = create((set,get: any) => ({
         set({ inputMessage: ''});
         set({ loading: true });
         
-        const response = await axios.post("http://localhost:4000/api/ai/chat", data)
+        const response = await axios.post("ai/chat", data)
         console.log(response)
         
         // Simulate AI response
