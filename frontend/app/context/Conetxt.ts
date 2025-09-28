@@ -7,8 +7,6 @@ export const useContext = create((set,get: any) => ({
     isDragOver: false,
     splitPos: 50,
     inputMessage: '',
-    isRecording: false,
-    audioLevels: Array(20).fill(0),
     loading: false,
     messages: [
         {
@@ -22,8 +20,6 @@ export const useContext = create((set,get: any) => ({
     saveFile: (file: string) => set({ documentContent : file }),
 
     setSplitPos: (splitPos: number) => set({ splitPos : splitPos }),
-
-    setAudioLevels: (audio: number[]) => set({ audioLevels : audio }),
 
     setInputMessage: (inputMsg: string) => {
       set({ inputMessage : inputMsg });
@@ -119,12 +115,7 @@ export const useContext = create((set,get: any) => ({
     
         set({ messages : [...prevMessages, aiResponse]});
         }, 1000);
-      },
-
-      handleVoiceToggle: () => {
-        set({isRecording : !get().isRecording});
-        // In real implementation, this would start/stop speech recognition
-      },    
+      },  
     
       handleKeyPress: (e: any) => {
           e.preventDefault();
