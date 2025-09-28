@@ -1,7 +1,6 @@
 "use client"
 import { useAnalytics } from '../../context/Analytics'
 import React, { useEffect, useState } from 'react'
-import '../../lib/chartjs'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 export default function DashBoard() {
@@ -41,7 +40,7 @@ export default function DashBoard() {
     <div className='font-sans container mx-auto my-auto mt-5'>
       <h1 className='text-[30px] font-bold text-blue-700'>Admin Dashboard</h1>
 
-      <p className='mt-5 text-[14.5px]'>Welcome to the admin dashboard. Here you can manage users, view analytics, and configure settings.</p>
+      <p className='mt-5 text-[14.5px]'>Welcome to the admin dashboard. Here you can view analytics, and configure settings.</p>
 
       <div className="flex justify-center items-center gap-20 mt-10">
         <div className="p-5 border-gray-300 border rounded-lg flex justify-center items-center gap-5">

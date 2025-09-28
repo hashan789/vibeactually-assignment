@@ -24,10 +24,7 @@ const LearningAssistant = () => {
       <div className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <FileText className="w-6 h-6 text-blue-600" />
-          <h1 className="text-xl font-semibold text-gray-900">Learning Assistant</h1>
-        </div>
-        <div className="text-sm text-gray-500">
-          Document: "Introduction to Machine Learning"
+          <h1 className="text-xl font-semibold text-gray-900">Services Assistant</h1>
         </div>
       </div>
 
