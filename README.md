@@ -24,24 +24,56 @@ This project is a full-stack, AI-powered chat application designed to provide dy
     </li>
   </ul>
   </li>
-</ul>
 
+<li>
 Backend:
 
+<ul>
+  <li>
 Express.js: A flexible and minimalist Node.js web application framework that provides a robust API layer for handling all client-side requests, including chat interactions and data retrieval.
+  </li>
+</ul>
+</li>
 
+<li>
 Database:
 
+<ul>
+  <li>
 Prisma: A next-generation ORM that provides a type-safe and intuitive way to interact with the database.
+  </li>
 
+  <li>   
 Supabase (PostgreSQL): A scalable, open-source backend-as-a-service that provides a managed PostgreSQL database, handling user authentication, and data storage.
+  </li>
+</ul>
 
+</li>
+
+<li>
 Artificial Intelligence:
 
+<ul>
+  <li>
 OpenAI GPT-4-0613: The large language model (LLM) responsible for generating the AI's chat responses.
+  </li>
 
+  <li>
 OpenAI Text Embeddings: Used for creating vector representations of text for semantic search capabilities.
+  </li>
+</ul>
 
+</li>
+
+
+<li>
 Admin Tools:
 
+<ul>
+  <li>
 Recharts: A charting library for React, used to build interactive and informative charts on the admin dashboard.
+  </li>
+</ul>
+</li>
+
+</ul>
