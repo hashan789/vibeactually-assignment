@@ -77,3 +77,33 @@ Recharts: A charting library for React, used to build interactive and informativ
 </li>
 
 </ul>
+
+<b>How to run this application locally</b>
+
+<ul>
+  <li>Open the IDE</li>
+  <li>
+    Run these commands in the terminal of the IDE
+
+    <ul>
+    <li>
+        frontend
+        <ul>
+        <li>cd frontend</li>
+        <li>npm run dev</li>
+        </ul>
+    </li>
+
+    <li>
+        backend
+        <ul>
+        <li>cd backend</li>
+        <li>npm run start</li>
+        </ul>
+    </li>
+    </ul>
+  </li>
+  
+</ul>
+
+
