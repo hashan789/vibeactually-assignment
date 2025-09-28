@@ -7,6 +7,9 @@ export const get_analytics = async (req: any,res: any) =>{
         const queries = await analytics.getQueries();
         const noOfWords = await analytics.getNoOfWords();
 
+        const today = new Date();
+        const noOfDailyQueries = await analytics.getNoOfDailyQueries(today);
+
         console.log({
             noOfResponses, queries
         })
@@ -14,7 +17,8 @@ export const get_analytics = async (req: any,res: any) =>{
         res.json({
             noOfRes: noOfResponses,
             queries: queries,
-            noOfWords: noOfWords
+            noOfWords: noOfWords,
+            dailyTokens: noOfDailyQueries
         })
     } catch (error) {
         console.error('Analytics error:', error);
