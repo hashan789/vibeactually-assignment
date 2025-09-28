@@ -2,7 +2,7 @@
 
 This project is a full-stack, AI-powered chat application designed to provide dynamic and intelligent conversational experiences. It features a modern, responsive user interface and a robust backend infrastructure capable of handling real-time chat interactions and complex data processing. The application's core functionality is powered by OpenAI's cutting-edge models, providing users with a highly interactive and context-aware chat environment.
 
-Key Features
+<b>Key Features</b>
 <ul>
   <li>Real-time Chat: Intelligent Responses: The core of the application is the GPT-4-0613 completions model. This allows the AI to generate highly accurate, coherent, and contextually relevant responses, making the conversations feel natural and insightful.</li>
 
@@ -13,7 +13,8 @@ Key Features
   <li>Admin Dashboard: A dedicated admin dashboard, powered by Recharts, provides high-level analytics on user engagement and AI performance. This includes visualizations of chat volume, response times, and other key metrics.</li>
 </ul>
 
-Technology Stack
+<b>Technology Stack</b>
+
 Frontend:
 
 Next.js: Used for building a fast, server-side rendered, and static-generated React application.
