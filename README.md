@@ -4,7 +4,7 @@ This project is a full-stack, AI-powered chat application designed to provide dy
 
 <b>Key Features</b>
 <ul>
-  <li>Real-time Chat: Intelligent Responses: The core of the application is the GPT-4-0613 completions model. This allows the AI to generate highly accurate, coherent, and contextually relevant responses, making the conversations feel natural and insightful.</li>
+  <li>Real-time Chat: Intelligent Responses: The core of the application is the GPT-4-0613 model. This allows the AI to generate highly accurate, coherent, and contextually relevant responses, making the conversations feel natural and insightful.</li>
 
   <li>Semantic Search & Retrieval: The application utilizes OpenAI's text embedding models to convert text into numerical vectors. This enables semantic search, allowing the AI to retrieve and reference relevant information from a pre-ingested knowledge base, ensuring its responses are grounded in specific data.</li>
 
