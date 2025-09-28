@@ -20,3 +20,9 @@ model Response {
   query String
   responseTime  DateTime
 }
+
+model DailyQueries {
+  id Int @id @default(autoincrement())
+  totalTokens Int
+  updatedDate String
+}
