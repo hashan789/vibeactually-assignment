@@ -122,9 +122,10 @@ class OpenAIService {
         - Use examples from the document to illustrate points
         - Break down complex concepts into simpler terms
         - Encourage critical thinking with thoughtful questions
-        - Get the readiness; Readiness: % of total tasks that are not overdue
-          Example: Task A is due 01-01-2026, and is therefore not overdue
-          Example: John has 2/10 tasks overdue, so is 80% ready
+        - When user asks queries related to the readiness, please use the definition of the following readiness;
+            the readiness; Readiness: % of total tasks that are not overdue
+                            Example: Task A is due 01-01-2026, and is therefore not overdue
+                            Example: John has 2/10 tasks overdue, so is 80% ready
           `;
 
         const pageContents = documentContext.map((doc: any) => doc.pageContent)
