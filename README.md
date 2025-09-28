@@ -3,7 +3,9 @@
 This project is a full-stack, AI-powered chat application designed to provide dynamic and intelligent conversational experiences. It features a modern, responsive user interface and a robust backend infrastructure capable of handling real-time chat interactions and complex data processing. The application's core functionality is powered by OpenAI's cutting-edge models, providing users with a highly interactive and context-aware chat environment.
 
 Key Features
-Real-time Chat: Users can engage in seamless conversations with an AI agent. The application provides a smooth, responsive chat interface that displays messages in real time.
+<ul>
+  <li>Real-time Chat: Users can engage in seamless conversations with an AI agent. The application provides a smooth, responsive chat interface that displays messages in real time.</li>
+</ul>
 
 Intelligent Responses: The core of the application is the GPT-4-0613 completions model. This allows the AI to generate highly accurate, coherent, and contextually relevant responses, making the conversations feel natural and insightful.
 
