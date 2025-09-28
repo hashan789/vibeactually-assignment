@@ -9,6 +9,7 @@ export const useContext = create((set,get: any) => ({
     inputMessage: '',
     isRecording: false,
     audioLevels: Array(20).fill(0),
+    loading: false,
     messages: [
         {
             id: 1,
@@ -35,7 +36,7 @@ export const useContext = create((set,get: any) => ({
         reader.onloadend =  async () => {
           const formData = new FormData()
           formData.append('document', file)
-          const response = await axios.post('http://localhost:5000/api/documents/upload' , formData, {
+          const response = await axios.post('http://localhost:4000/api/documents/upload' , formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -85,22 +86,24 @@ export const useContext = create((set,get: any) => ({
           "document" : docContent
         }
 
-        const response = await axios.post("http://localhost:5000/api/ai/chat", data)
-
-        console.log(response)
-    
+        
+        
         const userMessage = {
           id: Date.now(),
           role: 'user',
           content: inputMsg,
           timestamp: new Date()
         };
-
+        
         const prevMessages = get().messages
-    
+        
         set({ messages : [...prevMessages, userMessage]});
         set({ inputMessage: ''});
-    
+        set({ loading: true });
+        
+        const response = await axios.post("http://localhost:4000/api/ai/chat", data)
+        console.log(response)
+        
         // Simulate AI response
         setTimeout(() => {
           const aiResponse = {
@@ -111,6 +114,8 @@ export const useContext = create((set,get: any) => ({
           };
           
         const prevMessages = get().messages
+
+        set({ loading: false });
     
         set({ messages : [...prevMessages, aiResponse]});
         }, 1000);
