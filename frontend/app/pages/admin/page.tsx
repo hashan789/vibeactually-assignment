@@ -1,4 +1,5 @@
 "use client"
+import { ChartNoAxesCombinedIcon, Proportions } from 'lucide-react';
 import { useAnalytics } from '../../context/Analytics'
 import React, { useEffect, useState } from 'react'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
@@ -38,7 +39,10 @@ export default function DashBoard() {
 
   return (
     <div className='font-sans container mx-auto my-auto mt-5'>
-      <h1 className='text-[30px] font-bold text-blue-700'>Admin Dashboard</h1>
+      <div className="flex items-center gap-3">
+        <ChartNoAxesCombinedIcon size={50} className='text-blue-700'/> 
+        <h1 className='text-[30px] font-bold text-blue-700'>Admin Dashboard</h1>
+      </div>
 
       <p className='mt-5 text-[14.5px]'>Welcome to the admin dashboard. Here you can view analytics, and configure settings.</p>
 
