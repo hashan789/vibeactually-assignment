@@ -15,9 +15,16 @@ This project is a full-stack, AI-powered chat application designed to provide dy
 
 <b>Technology Stack</b>
 
-Frontend:
-
-Next.js: Used for building a fast, server-side rendered, and static-generated React application.
+<ul>
+  <li>
+  Frontend:
+  <ul>
+    <li>      
+  Next.js: Used for building a fast, server-side rendered, and static-generated React application.
+    </li>
+  </ul>
+  </li>
+</ul>
 
 Backend:
 
