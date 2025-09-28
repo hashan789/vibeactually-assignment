@@ -44,6 +44,52 @@ class Analytics{
 
         return totalWords;
     }
+
+    async getNoOfDailyQueries(date: Date){
+
+        const isDatePresent = await this.prisma.dailyQueries.findFirst({
+            where: {
+                updatedDate: date.getDate().toLocaleString()
+            }
+        })
+
+        const dailyQueries = await this.prisma.response.findMany()
+
+        const dailyQueriesUnique = dailyQueries.filter((query) => {
+            const queryDate = query.responseTime.getDate();
+            return queryDate === date.getDate();
+        })
+
+        let totalWords = 0;
+        dailyQueriesUnique.forEach(response => {
+            totalWords += response.content.split(' ').length;
+        });
+
+        if(isDatePresent){
+            const updateDailyQueries = await this.prisma.dailyQueries.update({
+                where: {
+                    id: isDatePresent.id
+                },
+                data: {
+                    totalTokens: totalWords
+                }
+            })
+        }
+        else{
+            const addDailyQueries = await this.prisma.dailyQueries.create({
+                data: {
+                    totalTokens: totalWords,
+                    updatedDate: date.getDate().toLocaleString()
+                }
+            })
+        }
+
+
+
+        const OriginaldailyQueries = await this.prisma.dailyQueries.findMany();
+
+        return OriginaldailyQueries;
+    }
 }
 
 
