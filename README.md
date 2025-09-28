@@ -4,16 +4,14 @@ This project is a full-stack, AI-powered chat application designed to provide dy
 
 Key Features
 <ul>
-  <li>Real-time Chat: Users can engage in seamless conversations with an AI agent. The application provides a smooth, responsive chat interface that displays messages in real time.</li>
+  <li>Real-time Chat: Intelligent Responses: The core of the application is the GPT-4-0613 completions model. This allows the AI to generate highly accurate, coherent, and contextually relevant responses, making the conversations feel natural and insightful.</li>
+
+  <li>Semantic Search & Retrieval: The application utilizes OpenAI's text embedding models to convert text into numerical vectors. This enables semantic search, allowing the AI to retrieve and reference relevant information from a pre-ingested knowledge base, ensuring its responses are grounded in specific data.</li>
+
+  <li>Intuitive User Interface: The frontend, built with Next.js, provides a fast and modern user experience. It features a clean, intuitive layout for easy navigation and interaction.</li>
+
+  <li>Admin Dashboard: A dedicated admin dashboard, powered by Recharts, provides high-level analytics on user engagement and AI performance. This includes visualizations of chat volume, response times, and other key metrics.</li>
 </ul>
-
-Intelligent Responses: The core of the application is the GPT-4-0613 completions model. This allows the AI to generate highly accurate, coherent, and contextually relevant responses, making the conversations feel natural and insightful.
-
-Semantic Search & Retrieval: The application utilizes OpenAI's text embedding models to convert text into numerical vectors. This enables semantic search, allowing the AI to retrieve and reference relevant information from a pre-ingested knowledge base, ensuring its responses are grounded in specific data.
-
-Intuitive User Interface: The frontend, built with Next.js, provides a fast and modern user experience. It features a clean, intuitive layout for easy navigation and interaction.
-
-Admin Dashboard: A dedicated admin dashboard, powered by Recharts, provides high-level analytics on user engagement and AI performance. This includes visualizations of chat volume, response times, and other key metrics.
 
 Technology Stack
 Frontend:
