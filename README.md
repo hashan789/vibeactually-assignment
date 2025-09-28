@@ -84,7 +84,6 @@ Recharts: A charting library for React, used to build interactive and informativ
   <li>Open the IDE</li>
   <li>
     Run these commands in the terminal of the IDE
-
     <ul>
     <li>
         frontend
@@ -103,7 +102,6 @@ Recharts: A charting library for React, used to build interactive and informativ
     </li>
     </ul>
   </li>
-  
 </ul>
 
 
