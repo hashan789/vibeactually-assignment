@@ -17,22 +17,6 @@ export default function RightPanel() {
         chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
       }, [messages]);
     
-      // Simulate audio visualization during recording
-      useEffect(() => {
-        let interval : NodeJS.Timeout;
-        if (isRecording) {
-          interval = setInterval(() => {
-            const prevAudioLevels = (audioLevels : any) => {
-              return audioLevels.map(() => Math.random() * 100);
-          };
-            setAudioLevels(prevAudioLevels(audioLevels));
-          }, 100);
-        } else {
-          setAudioLevels(Array(20).fill(0));
-        }
-        return () => clearInterval(interval);
-      }, [isRecording]);
-    
 
   return (
     <div 
@@ -51,7 +35,7 @@ export default function RightPanel() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-scroll p-4 space-y-4">
+          <div className="flex-1 overflow-y-scroll p-4 space-y-4 pb-[200px]">
             {messages.map((message: any) => (
               <div
                 key={message.id}
@@ -82,8 +66,8 @@ export default function RightPanel() {
           </div>
 
           {/* Input Area */}
-          <div className="border-t border-gray-200 p-4 fixed bottom-0 w-[50%] bg-white">
-            <div className="flex items-end space-x-2">
+          <div className="border-t border-gray-200 p-4 fixed bottom-0 max-w-[100%] bg-white" style={{ width: `${100 - splitPos}%` }}>
+            <div className="flex items-center space-x-2">
               <div className="flex-1 relative">
                 <textarea
                   value={inputMessage}
