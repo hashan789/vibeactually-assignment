@@ -89,6 +89,7 @@ Recharts: A charting library for React, used to build interactive and informativ
         frontend
         <ul>
         <li>cd frontend</li>
+        <li>npm install</li>
         <li>npm run dev</li>
         </ul>
     </li>
@@ -96,6 +97,7 @@ Recharts: A charting library for React, used to build interactive and informativ
         backend
         <ul>
         <li>cd backend</li>
+        <li>npm install</li>
         <li>npm run start</li>
         </ul>
     </li>
