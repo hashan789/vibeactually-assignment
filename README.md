@@ -1,4 +1,4 @@
-<h1>VibeActually Take home assignment</h1>
+<h1>Conversational Learning AI Assistant</h1>
 
 This project is a full-stack, AI-powered chat application designed to provide dynamic and intelligent conversational experiences. It features a modern, responsive user interface and a robust backend infrastructure capable of handling real-time chat interactions and complex data processing. The application's core functionality is powered by OpenAI's cutting-edge models, providing users with a highly interactive and context-aware chat environment.
 
